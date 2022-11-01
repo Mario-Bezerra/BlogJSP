@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entidades/Comentario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entidades/Postagem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entidades/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Conexao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FEAT&gt; Feat of Conexao">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entidades/Enums/Perfil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entidades/Enums/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Comentario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Postagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Postagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +41,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Entidades" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,6 +59,14 @@
       <option name="presentableId" value="Default" />
       <updated>1667305140294</updated>
     </task>
+    <task id="LOCAL-00001" summary="&lt;FEAT&gt; Feat of Conexao">
+      <created>1667308119741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667308119741</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -69,5 +79,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&lt;FEAT&gt; Feat of Conexao" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;FEAT&gt; Feat of Conexao" />
   </component>
 </project>
