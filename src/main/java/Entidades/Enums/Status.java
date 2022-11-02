@@ -1,7 +1,7 @@
 package Entidades.Enums;
 
 public enum Status {
-    AGUARDANDO_APROVAÇÃO,
+    AGUARDANDO_APROVACAO,
     APROVADO,
     REPROVADO;
 }

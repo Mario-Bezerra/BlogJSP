@@ -4,25 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FEAT&gt; Feat of classes and enums">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/Buscador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/Moderator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/DaoComentario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/DaoPostagem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/DaoUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/cadastro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/post.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/validacao.jsp" afterDir="false" />
+    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FEAT&gt; Build pages with bugs and trying correct then">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/comentario.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/comentarioForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Buscador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Buscador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Comentario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Postagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Postagem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Conexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Conexao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Enums/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Enums/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/post.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/validacao.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/validacaoLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,20 +36,23 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GwgcLnRU4wvwQz85E2uMhxEgF4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,6 +61,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\f0fp1410\Desktop\BlogJSP\BlogJsp\src\main\webapp" />
+      <recent name="C:\Users\f0fp1410\Desktop\BlogJSP\BlogJsp\src\main\webapp\RecebimentoForms" />
     </key>
   </component>
   <component name="RunManager">
@@ -104,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667308872111</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&lt;FEAT&gt; Build pages with bugs and trying correct then">
+      <created>1667414354291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667414354291</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,8 +123,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&lt;FEAT&gt; Feat of Conexao" />
     <MESSAGE value="&lt;FEAT&gt; Feat of classes and enums" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;FEAT&gt; Feat of classes and enums" />
+    <MESSAGE value="&lt;FEAT&gt; Build pages with bugs and trying correct then" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;FEAT&gt; Build pages with bugs and trying correct then" />
   </component>
 </project>

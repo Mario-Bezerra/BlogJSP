@@ -6,7 +6,8 @@ public class Test {
 
 
         System.out.println(DaoUsuario.consultar("admin"));
-
+        //"POST".equalsIgnoreCase(request.getMethod();
+        Integer asdasjd = Integer.valueOf("6");
 
     }
 }

@@ -18,7 +18,6 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Science Blog</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -37,7 +36,7 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0" id="itensNav">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.jsp">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 utils" href="login.jsp">Entrar</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 " href="cadastro.jsp">Cadastrar</a></li>
@@ -61,7 +60,7 @@
         <!-- Main Content-->
         <%
             Postagem postagem = new Postagem();
-            List<Postagem> lista = Buscador.consultar();
+            List<Postagem> lista = Buscador.consultaInicial();
         %>
          <% for(Postagem p : lista) {%>
         <div class="container px-4 px-lg-5">
@@ -87,7 +86,28 @@
         <%}%>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search)
+            const logado = urlParams.get('estaLogado')
+            const idUsuario = urlParams.get('usuarioId')
+            const perfil = urlParams.get('perfil')
+            if(logado == 'true'){
+                window.sessionStorage.setItem("logado", logado)
+                window.sessionStorage.setItem("id", idUsuario)
+                window.sessionStorage.setItem("perfil", perfil)
+                window.location.href = "http://localhost:8080/index.jsp"
+            }
+
+            var perfilUsuario = window.sessionStorage.getItem('perfil')
+            if(perfilUsuario != null && perfilUsuario == 'MODERADOR'){
+                const navbar = document.getElementById('itensNav');
+                navbar.innerHTML = 
+                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.jsp">Home</a></li>' +
+                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="moderador.jsp">Moderador</a></li>' +
+                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 utils" href="login.jsp">Entrar</a></li>' +
+                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 " href="cadastro.jsp">Cadastrar</a></li>'
+                
+            }
+        </script>
     </body>
 </html>

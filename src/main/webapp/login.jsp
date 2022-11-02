@@ -16,7 +16,7 @@
     <title>Document</title>
 <body>
     <main>
-        <form id="login_form" class="form_class masthead" action="validacao.jsp" method="POST">
+        <form id="login_form" class="form_class masthead" action="validacaoLogin.jsp" method="POST">
             <div class="form_div">
                 <label>Login:</label>
                 <input class="field_class" name="email" id="email" type="text" placeholder="Insira o seu login" autofocus>

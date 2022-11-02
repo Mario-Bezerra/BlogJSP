@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @ToString
 public class Comentario {
 
-    private Integer id;
+    private Integer id = 0;
     private String conteudo;
     private Usuario usuarioId;
     private Postagem postagemId;
@@ -22,16 +22,17 @@ public class Comentario {
 
     public Comentario() {}
 
-    public Comentario(Integer id, String conteudo, Usuario usuarioId, Postagem postagemId) {
+    public Comentario(String conteudo, Usuario usuarioId, Postagem postagemId) {
         this.id = id;
         this.conteudo = conteudo;
         this.usuarioId = usuarioId;
         this.postagemId = postagemId;
-        this.status = Status.AGUARDANDO_APROVAÇÃO;
+        this.status = Status.AGUARDANDO_APROVACAO;
         this.tempoCriado = Timestamp.valueOf(LocalDateTime.now());
     }
 
     public String getStatusString(){
         return this.status.toString();
     }
+    
 }
