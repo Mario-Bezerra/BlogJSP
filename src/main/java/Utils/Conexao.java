@@ -20,7 +20,6 @@ public class Conexao {
 
         try {
             con = DriverManager.getConnection(url, user, password);
-            System.out.println("Conectado.");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

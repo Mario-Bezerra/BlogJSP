@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FEAT&gt; Feat of Conexao">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entidades/Enums/Perfil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entidades/Enums/Status.java" afterDir="false" />
+    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FEAT&gt; Feat of classes and enums">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/Buscador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/Moderator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/DaoComentario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/DaoPostagem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao/DaoUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/cadastro.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/post.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/validacao.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Comentario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Postagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Postagem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entidades/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Conexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Conexao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +52,34 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Entidades" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\f0fp1410\Desktop\BlogJSP\BlogJsp\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="BlogJsp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667308119741</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&lt;FEAT&gt; Feat of classes and enums">
+      <created>1667308872111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667308872111</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&lt;FEAT&gt; Feat of Conexao" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;FEAT&gt; Feat of Conexao" />
+    <MESSAGE value="&lt;FEAT&gt; Feat of classes and enums" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;FEAT&gt; Feat of classes and enums" />
   </component>
 </project>

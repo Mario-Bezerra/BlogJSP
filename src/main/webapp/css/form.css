@@ -1,0 +1,82 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+h1 {
+    letter-spacing: 1.5vw;
+    font-family: 'system-ui';
+    text-transform: uppercase;
+    text-align: center;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: url(https://img.ibxk.com.br/2019/05/17/a-17202525498312.jpg) no-repeat center center;
+    background-size: cover;
+}
+.form_class {
+    width: 500px;
+    padding: 40px;
+    border-radius: 8px;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: rgb(0,0,0,0.7);
+}
+.form_div {
+    text-transform: uppercase;
+}
+.form_div > label {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 1rem;
+}
+.info_div {
+    text-align: center;
+    margin-top: 20px;
+}
+.info_div {
+    color: white;
+    letter-spacing: 1px;
+}
+.field_class {
+    width: 100%;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px 0px;
+    text-indent: 6px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'system-ui';
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+.submit_class {
+    border-style: none;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    padding: 8px 20px;
+    font-family: 'system-ui';
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.info_div > p > a {
+    margin-left: 10px;
+    font-size: 18px;
+    color: blue;
+    text-decoration: none;
+}
+
+.info_div > p > a:visited {
+    color: orange;
+    text-decoration: none;
+}
