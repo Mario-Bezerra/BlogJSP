@@ -3,8 +3,16 @@
     <%@ page contentType="text/html" pageEncoding="UTF-8" %>
         <%@ page import="Entidades.Postagem" %>
             <%@ page import="Dao.DaoPostagem" %>
+            <%@ page import="Entidades.Comentario" %>
+            <%@ page import="Controller.Buscador" %>
+            <%@page import="java.util.List" %>
 
-                <% int id=Integer.valueOf(request.getParameter("id")); Postagem p=DaoPostagem.consultar(id); %>
+                <% int id=Integer.valueOf(request.getParameter("id")); 
+                Postagem p=DaoPostagem.consultar(id); 
+                Comentario com=new Comentario(); 
+                List<Comentario> lista = Buscador.comentariosDaPostagem(p.getId());
+                System.out.println(lista);
+                %>
 
                     <!DOCTYPE html>
                     <html lang="en">
@@ -15,8 +23,6 @@
                         <meta name="description" content="" />
                         <meta name="author" content="" />
                         <title>Science Blog</title>
-                        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-                        <!-- Font Awesome icons (free version)-->
                         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
                             crossorigin="anonymous"></script>
                         <!-- Google fonts-->
@@ -35,7 +41,7 @@
                         <!-- Navigation-->
                         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
                             <div class="container px-4 px-lg-5">
-                                <a class="navbar-brand" href="index.html">Science Blog</a>
+                                <a class="navbar-brand" href="index.jsp">Science Blog</a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                                     aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +49,7 @@
                                     <i class="fas fa-bars"></i>
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                                    <ul class="navbar-nav ms-auto py-4 py-lg-0" id="itensNav">
                                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                                                 href="index.jsp">Home</a></li>
                                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 utils"
@@ -91,52 +97,103 @@
                                 <hr class="my-4" />
                                 <div class="d-flex justify-content-around">
                                     <h4> Comentarios <h4>
-                                    <div id="adicionarComentario"></div>
+                                            <div id="adicionarComentario"></div>
                                 </div>
                             </div>
+                            <hr class="my-4" />
+                                <% for(Comentario c : lista) {%>
+                                    <div class="container px-4 px-lg-5">
+                                        <div class="row gx-4 gx-lg-5 justify-content-center">
+                                            <div class="col-md-10 col-lg-8 col-xl-7">
+                                                <!-- Post preview-->
+                                                <div class="post-preview">
+                                                    <%out.write("<a href=post.jsp?id="+c.getPostagemId().getId()+">");%>
+                                                        <h4 class="">
+                                                            <% out.write(""+c.getUsuarioId().getNome()); %>
+                                                        </h4>
+                                                        <h5 class="post-subtitle">
+                                                            <% out.write(""+c.getConteudo()); %>
+                                                        </h5>
+                                                        </a>
+                                                        <p class="post-meta">
+                                                            Postado no post
+                                                            <a href="#!">
+                                                                <% out.write(""+c.getPostagemId().getTitulo()); %>
+                                                            </a>
+                                                            em <% out.write(""+c.getTempoCriado()); %>
+                                                        </p>
+                                                </div>
+                                                <!-- Divider-->
+                                                <hr class="my-4" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%}%>
                         </article>
                         <!-- Bootstrap core JS-->
-                        <script
-                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
                         </script>
                         <script>
+                            window.onload = verificaPerfil();
+
                             var logado = window.sessionStorage.getItem('logado')
                             var perfil = window.sessionStorage.getItem('perfil')
                             const urlParams = new URLSearchParams(window.location.search)
                             var idPost = urlParams.get('id')
 
-                            if (logado == 'true'){ 
+                            if (logado == 'true') {
                                 const areaComentario = document.getElementById('adicionarComentario')
                                 areaComentario.innerHTML = '<button type="button" class="btn btn-dark"' +
-                                'onclick="adicionarComentario()">Adicionar comentario</button>'
-                                } else {
+                                    'onclick="adicionarComentario()">Adicionar comentario</button>'
+                            } else {
                                 const areaComentario = document.getElementById('adicionarComentario')
                                 areaComentario.innerHTML =
-                                '<button type="button" class="btn btn-warning"' +
-                                'onclick="login()">Para comentar precisa estar logado, clique aqui</button>'
-                                }
-
-
-                            if(perfil == 'MODERADOR'){
-                                const areaComentario = document.getElementById('adicionarComentario')
-                                areaComentario.innerHTML = '<button type="button" class="btn btn-dark"' +
-                                'onclick="adicionarComentario()">Adicionar comentario</button>'+
-                                '<button type="button" class="btn btn-danger"' +
-                                'onclick="removerPost()">Remover POST</button>'
+                                    '<button type="button" class="btn btn-warning"' +
+                                    'onclick="login()">Para comentar precisa estar logado, clique aqui</button>'
                             }
 
-                            function adicionarComentario(){
+
+                            if (perfil == 'MODERADOR') {
+                                const areaComentario = document.getElementById('adicionarComentario')
+                                areaComentario.innerHTML = '<button type="button" class="btn btn-dark"' +
+                                    'onclick="adicionarComentario()">Adicionar comentario</button>' +
+                                    '<button type="button" class="btn btn-danger"' +
+                                    'onclick="removerPost()">REMOVER POST</button>' +
+                                    '<button type="button" class="btn btn-warning"' +
+                                    'onclick="editarPost()">EDITAR POST</button>'
+                            }
+
+                            function adicionarComentario() {
                                 window.location.href = "comentario.jsp?idPost=" + idPost;
                             }
 
-                            function removerPost(){
+                            function removerPost() {
                                 window.location.href = "remover.jsp?idPost=" + idPost;
                             }
 
-                            function login(){
-                                 window.location.href = "login.jsp";
+                            function editarPost() {
+                                window.location.href = "editarPost.jsp?idPost=" + idPost;
                             }
-                            
+
+                            function login() {
+                                window.location.href = "login.jsp";
+                            }
+
+                            function verificaPerfil(){
+                            var perfilUsuario = window.sessionStorage.getItem('perfil')
+                            if (perfilUsuario != null && perfilUsuario == 'MODERADOR') {
+                                const navbar = document.getElementById('itensNav');
+                                navbar.innerHTML =
+                                    '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.jsp">Home</a></li>' +
+                                    '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="adicionarPost.jsp">Adicionar post</a></li>' +
+                                    '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="moderador.jsp">Moderador</a></li>'
+                            }
+                            if (perfilUsuario != null && perfilUsuario == 'USUARIO') {
+                                const navbar = document.getElementById('itensNav');
+                                navbar.innerHTML =
+                                    '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.jsp">Home</a></li>'
+                            }
+                        }
                         </script>
                     </body>
 

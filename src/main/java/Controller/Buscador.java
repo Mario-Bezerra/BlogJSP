@@ -20,21 +20,23 @@ public class Buscador {
         List<Comentario> lista = new ArrayList<Comentario>();
         Connection con = Conexao.conectar();
         if(con != null) {
-            String sql = "select * from comentario c left join postagem" +
-            "on c.Postagem_id = ?";
-            try{
-                PreparedStatement stm = con.prepareStatement(sql);
-                stm.setInt(1, postagemId);
+            try {
+                PreparedStatement stm =
+                        con.prepareStatement(
+                                "select * from comentario c where c.Postagem_id = ? and c.status = 'APROVADO'");
+                stm.setInt(1,postagemId);
                 ResultSet rs = stm.executeQuery();
-                Comentario c = new Comentario();
-                c.setId(rs.getInt("idComentario"));
-                c.setStatus(Status.valueOf(rs.getString("status")));
-                c.setPostagemId(DaoPostagem.consultar(rs.getInt("Postagem_id")));
-                c.setUsuarioId(DaoUsuario.consultar(rs.getInt("Usuario_id")));
-                c.setConteudo(rs.getString("conteudo"));
-                c.setTempoCriado(rs.getTimestamp("tempoCriado"));
-                lista.add(c);
-            } catch (Exception e) {
+                while (rs.next()) {
+                    Comentario c = new Comentario();
+                    c.setId(rs.getInt("idComentario"));
+                    c.setStatus(Status.valueOf(rs.getString("status")));
+                    c.setPostagemId(DaoPostagem.consultar(rs.getInt("Postagem_id")));
+                    c.setUsuarioId(DaoUsuario.consultar(rs.getInt("Usuario_id")));
+                    c.setConteudo(rs.getString("conteudo"));
+                    c.setTempoCriado(rs.getTimestamp("tempoCriado"));
+                    lista.add(c);
+                }
+            } catch (SQLException e) {
                 return lista;
             }
         }

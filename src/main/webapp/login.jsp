@@ -18,9 +18,9 @@
     <main>
         <form id="login_form" class="form_class masthead" action="validacaoLogin.jsp" method="POST">
             <div class="form_div">
-                <label>Login:</label>
+                <label>Email:</label>
                 <input class="field_class" name="email" id="email" type="text" placeholder="Insira o seu login" autofocus>
-                <label>Password:</label>
+                <label>Senha:</label>
                 <input id="pass" class="field_class" name="senha" id="senha" type="password" placeholder="Insira a sua senha">
                 <button class="submit_class btn btn-dark" form="login_form" onclick="salvar()">Entrar</button>
             </div>

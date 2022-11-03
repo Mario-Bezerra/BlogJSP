@@ -43,10 +43,7 @@
                                         <ul class="navbar-nav ms-auto py-4 py-lg-0" id="itensNav">
                                             <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                                                     href="index.jsp">Home</a></li>
-                                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 utils"
-                                                    href="login.jsp">Entrar</a></li>
-                                            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 "
-                                                    href="cadastro.jsp">Cadastrar</a></li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -100,7 +97,15 @@
                                     <%}%>
                                         <!-- Bootstrap core JS-->
                                         <script
-                                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+                                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+                                        </script>
+                                        <script>
+                                        var perfil = window.sessionStorage.getItem('perfil')
+                                        if(perfil != 'MODERADOR'){
+                                            document.getElementsByTagName[body][0] = '';
+                                        }
+                                        </script>
+
                         </body>
 
                         </html>

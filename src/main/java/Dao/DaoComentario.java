@@ -62,13 +62,13 @@ public class DaoComentario {
         return lista;
     }
 
-    public static Comentario consultar(int idPostagem){
+    public static Comentario consultar(int idComentario){
         Connection con = Conexao.conectar();
         Comentario c = new Comentario();
         if(con != null){
             try {
                 PreparedStatement stm = con.prepareStatement("select * from comentario where idComentario = ?");
-                stm.setInt(1,idPostagem);
+                stm.setInt(1,idComentario);
                 ResultSet rs = stm.executeQuery();
                 if(rs.next()){
                     c.setId(rs.getInt("idComentario"));

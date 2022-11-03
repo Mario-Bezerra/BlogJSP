@@ -8,21 +8,53 @@
     <title>Document</title>
 <body>
     <main>
-        <form id="login_form " class="form_class masthead" action="login/login-access.php" method="post">
+        <form id="login_form" class="form_class masthead" action="cadastroUsuario.jsp" method="post">
             <div class="form_div">
                 <label>Nome:</label>
-                <input class="field_class" name="nome" type="text" placeholder="Insira o seu login" autofocus>
+                <input class="field_class" name="nome" id="nome" type="text" placeholder="Insira o seu login" autofocus>
                 <label>Sobrenome:</label>
-                <input class="field_class" name="sobrenome" type="text" placeholder="Insira a sua senha">
+                <input class="field_class" name="sobrenome" id="sobrenome" type="text" placeholder="Insira a sua senha">
                 <label>Email:</label>
-                <input class="field_class" name="email" type="text" placeholder="Insira o seu login">
+                <input class="field_class" name="email" id="email" type="text" placeholder="Insira o seu login">
                 <label>Senha:</label>
                 <input class="field_class" name="senha" type="password" placeholder="Insira o seu login">
                 <label>Data de nascimento:</label>
-                <input class="field_class" name="dataNascimento" type="date">
-                <button class="submit_class btn btn-dark" type="submit" form="login_form" onclick="">Cadastrar</button>
+                <input class="field_class" name="dataNascimento" id="dataNascimento" type="date">
+                <button class="submit_class btn btn-dark" type="submit" form="login_form" onclick="cadastro()">Cadastrar</button>
             </div>
-        </form>
+               </form>
     </main>
+    <script>
+        function cadastro(){
+            event.preventDefault()
+
+            var nome = document.getElementById('nome')
+            if(nome.value == ''){
+                nome.focus()
+              return
+            }
+
+            var sobrenome = document.getElementById('sobrenome')
+            if(sobrenome.value == ''){
+                sobrenome.focus()
+              return
+            }
+            
+            var email = document.getElementById('email')
+            if(email.value == ''){
+                email.focus()
+              return
+            }
+
+            var dataNascimento = document.getElementById('dataNascimento')
+            if(dataNascimento.value == ''){
+                dataNascimento.focus()
+              return
+            }
+
+            document.getElementById("login_form").submit()
+        }
+    </script>
+    
 </body>
 </html>
