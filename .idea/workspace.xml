@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FIX&gt; Removing unused things">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editarPost.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editarPost.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/post.jsp" afterDir="false" />
+    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FEAT&gt; [COMENTARIO] Delete coment&#10;&lt;FIX&gt; [POST] Delete post">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/apagarComentario.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667482436995</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="&lt;FEAT&gt; [COMENTARIO] Delete coment&#10;&lt;FIX&gt; [POST] Delete post">
+      <created>1667485319899</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667485319899</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +178,7 @@
     <MESSAGE value="&lt;FEAT &gt; [remover.jsp] &lt;FIX&gt;[index.jsp , post.jsp] Adding Delete post button and improving the business logic" />
     <MESSAGE value="&lt;FEAT &gt; [postagem CRUD interface] &lt;FIX&gt;[comentarios on post] Fixing the bugs and sharpned the usuability" />
     <MESSAGE value="&lt;FIX&gt; Removing unused things" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;FIX&gt; Removing unused things" />
+    <MESSAGE value="&lt;FEAT&gt; [COMENTARIO] Delete coment&#10;&lt;FIX&gt; [POST] Delete post" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;FEAT&gt; [COMENTARIO] Delete coment&#10;&lt;FIX&gt; [POST] Delete post" />
   </component>
 </project>
