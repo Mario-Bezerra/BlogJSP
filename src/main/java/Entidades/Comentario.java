@@ -23,7 +23,6 @@ public class Comentario {
     public Comentario() {}
 
     public Comentario(String conteudo, Usuario usuarioId, Postagem postagemId) {
-        this.id = id;
         this.conteudo = conteudo;
         this.usuarioId = usuarioId;
         this.postagemId = postagemId;
