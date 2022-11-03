@@ -34,5 +34,13 @@ public class Comentario {
     public String getStatusString(){
         return this.status.toString();
     }
+
+    public void aprovar(){
+        this.status = Status.APROVADO;
+    }
+
+    public void reprovar(){
+        this.status = Status.REPROVADO;
+    }
     
 }

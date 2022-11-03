@@ -88,18 +88,20 @@ public class DaoComentario {
     public static boolean alterar(Comentario c){
         Connection con = Conexao.conectar();
         if(con != null){
-            String sql = "update comentario set "+
-                    "status = ?, Postagem_id = ?, "+
-                    "Usuario_id = ?, conteudo = ?, " +
-                    "tempoCriado = ? where idPostagem = ?";
+            String sql = "update comentario set " +
+                    "status = ?, " +
+                    "Postagem_id = ?, " +
+                    "Usuario_id = ?, " +
+                    "conteudo = ? " +
+                    "where idComentario = ?";
             try {
                 PreparedStatement stm = con.prepareStatement(sql);
                 stm.setString(1, c.getStatusString());
                 stm.setInt(2, c.getPostagemId().getId());
                 stm.setInt(3, c.getUsuarioId().getId());
                 stm.setString(4, c.getConteudo());
-                stm.setTimestamp(5, c.getTempoCriado());
-                stm.setInt(6, c.getId());
+                stm.setInt(5, c.getId());
+                System.out.println(c);
                 stm.execute();
                 return true;
             } catch (SQLException e) {

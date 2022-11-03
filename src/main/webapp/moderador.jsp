@@ -74,7 +74,7 @@
                                             <div class="col-md-10 col-lg-8 col-xl-7">
                                                 <!-- Post preview-->
                                                 <div class="post-preview">
-                                                    <%out.write("<a href=post.jsp?id="+c.getId()+">");%>
+                                                    <%out.write("<a href=post.jsp?id="+c.getPostagemId().getId()+">");%>
                                                         <h4 class="">
                                                             <% out.write(""+c.getUsuarioId().getNome()); %>
                                                         </h4>
@@ -90,8 +90,8 @@
                                                             em <% out.write(""+c.getTempoCriado()); %>
                                                         </p>
                                                 </div>
-                                                <button class="btn btn-success" onclick=""> APROVAR </button>
-                                                <button class="btn btn-danger" onclick=""> REPROVAR </button>
+                                                <%out.write("<a class='btn btn-success' href=aprovar.jsp?idComent="+c.getId()+">");%> APROVAR</a>
+                                                <%out.write("<a class='btn btn-danger' href=reprovar.jsp?idComent="+c.getId()+">");%> REPROVAR</a>
                                                 <!-- Divider-->
                                                 <hr class="my-4" />
                                             </div>
