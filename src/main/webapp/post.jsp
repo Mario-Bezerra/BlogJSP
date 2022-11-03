@@ -101,16 +101,40 @@
                         </script>
                         <script>
                             var logado = window.sessionStorage.getItem('logado')
+                            var perfil = window.sessionStorage.getItem('perfil')
                             const urlParams = new URLSearchParams(window.location.search)
                             var idPost = urlParams.get('id')
 
                             if (logado == 'true'){ 
                                 const areaComentario = document.getElementById('adicionarComentario')
                                 areaComentario.innerHTML = '<button type="button" class="btn btn-dark"' +
-                                'onclick="adicionarComentario()">Adicionar comentario</button>'}
+                                'onclick="adicionarComentario()">Adicionar comentario</button>'
+                                } else {
+                                const areaComentario = document.getElementById('adicionarComentario')
+                                areaComentario.innerHTML =
+                                '<button type="button" class="btn btn-warning"' +
+                                'onclick="login()">Para comentar precisa estar logado, clique aqui</button>'
+                                }
+
+
+                            if(perfil == 'MODERADOR'){
+                                const areaComentario = document.getElementById('adicionarComentario')
+                                areaComentario.innerHTML = '<button type="button" class="btn btn-dark"' +
+                                'onclick="adicionarComentario()">Adicionar comentario</button>'+
+                                '<button type="button" class="btn btn-danger"' +
+                                'onclick="removerPost()">Remover POST</button>'
+                            }
 
                             function adicionarComentario(){
-                                window.location.href = "http://localhost:8080/comentario.jsp?idPost=" + idPost;
+                                window.location.href = "comentario.jsp?idPost=" + idPost;
+                            }
+
+                            function removerPost(){
+                                window.location.href = "remover.jsp?idPost=" + idPost;
+                            }
+
+                            function login(){
+                                 window.location.href = "login.jsp";
                             }
                             
                         </script>

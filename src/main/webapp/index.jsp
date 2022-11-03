@@ -103,10 +103,13 @@
                 const navbar = document.getElementById('itensNav');
                 navbar.innerHTML = 
                 '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.jsp">Home</a></li>' +
-                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="moderador.jsp">Moderador</a></li>' +
-                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 utils" href="login.jsp">Entrar</a></li>' +
-                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 " href="cadastro.jsp">Cadastrar</a></li>'
-                
+                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.jsp">Adicionar post</a></li>' +
+                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="moderador.jsp">Moderador</a></li>'
+            }
+            if(perfilUsuario != null && perfilUsuario == 'USUARIO'){
+                const navbar = document.getElementById('itensNav');
+                navbar.innerHTML =
+                '<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.jsp">Home</a></li>'
             }
         </script>
     </body>
