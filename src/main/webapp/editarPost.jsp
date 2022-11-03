@@ -18,16 +18,19 @@
         <form id="editarPost" class="form_class masthead" action='editaPostValidacao.jsp?'>' method="post">
             <div class="form_div">
                 <input id ="idUsuario" name="idUsuario" type="hidden">
-                <input class="field_class" id ="postId" name="postId" readonly value='<% out.write(""+p.getId()); %>' >
+                <input class="field_class" id ="postId" name="postId" readonly value='<% out.write(""+p.getId()); %>' hidden>
                 <label>Titulo:</label>
                 <input class="field_class" name="titulo" id="titulo" type="text" value="<% out.write(p.getTitulo());%> " >
                 <label>Texto:</label>
-                <textarea class="field_class" maxlength="1000" minlength="30" name="texto" id="texto" cols="30" rows="20" placeholder='<% out.write(""+p.getConteudo());%>' ></textarea>
-                <button class="submit_class btn btn-dark" type="submit" form="editarPost" onclick="submit()">Cadastrar</button>
+                <textarea class="field_class" maxlength="2000" minlength="30" name="texto" id="texto" cols="30" rows="20" placeholder='<% out.write(""+p.getConteudo());%>' ></textarea>
+                <button class="submit_class btn btn-dark" type="submit" form="editarPost" onclick="submit()">Atualizar</button>
             </div>
                </form>
     </main>
     <script>
+        var textarea = document.getElementById(texto);
+        textarea.value = '<% out.write(""+p.getConteudo());%>'
+        
         function submit(){
             event.preventDefault()
 

@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FEAT &gt; [remover.jsp] &lt;FIX&gt;[index.jsp , post.jsp] Adding Delete post button and improving the business logic">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/adicionarPost.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/cadastroUsuario.jsp" afterDir="false" />
+    <list default="true" id="bcdf75f4-9a42-4c98-a779-b497e5d3b507" name="Changes" comment="&lt;FIX&gt; Removing unused things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Buscador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Buscador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/DaoComentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao/DaoComentario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cadastro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cadastro.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moderador.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moderador.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editarPost.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editarPost.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/post.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +129,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667469591202</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&lt;FEAT &gt; [postagem CRUD interface] &lt;FIX&gt;[comentarios on post] Fixing the bugs and sharpned the usuability">
+      <created>1667481193506</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667481193506</updated>
+    </task>
+    <task id="LOCAL-00009" summary="&lt;FEAT &gt; [postagem CRUD interface] &lt;FIX&gt;[comentarios on post] Fixing the bugs and sharpned the usuability">
+      <created>1667481207878</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667481207878</updated>
+    </task>
+    <task id="LOCAL-00010" summary="&lt;FIX&gt; Removing unused things">
+      <created>1667482436995</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667482436995</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +172,8 @@
     <MESSAGE value="&lt;FEAT &amp; FIX&gt; Building the moderator page and fixing some bugs" />
     <MESSAGE value="&lt;FEAT &gt; Aprovar e reprovar posts" />
     <MESSAGE value="&lt;FEAT &gt; [remover.jsp] &lt;FIX&gt;[index.jsp , post.jsp] Adding Delete post button and improving the business logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;FEAT &gt; [remover.jsp] &lt;FIX&gt;[index.jsp , post.jsp] Adding Delete post button and improving the business logic" />
+    <MESSAGE value="&lt;FEAT &gt; [postagem CRUD interface] &lt;FIX&gt;[comentarios on post] Fixing the bugs and sharpned the usuability" />
+    <MESSAGE value="&lt;FIX&gt; Removing unused things" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;FIX&gt; Removing unused things" />
   </component>
 </project>

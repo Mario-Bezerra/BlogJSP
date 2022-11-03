@@ -15,7 +15,7 @@ main {
     height: 100vh;
     width: 100%;
     background: url(https://img.ibxk.com.br/2019/05/17/a-17202525498312.jpg) no-repeat center center;
-    background-size: cover;
+    background-size: 100%;
 }
 .form_class {
     width: 500px;

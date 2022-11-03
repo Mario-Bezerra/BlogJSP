@@ -102,11 +102,14 @@
                             </div>
                             <hr class="my-4" />
                                 <% for(Comentario c : lista) {%>
+                                    <form action="apagarComentario.jsp" id="apagarComentario">
                                     <div class="container px-4 px-lg-5">
                                         <div class="row gx-4 gx-lg-5 justify-content-center">
                                             <div class="col-md-10 col-lg-8 col-xl-7">
                                                 <!-- Post preview-->
                                                 <div class="post-preview">
+                                                    <input name="idC" id="idC" value='<% out.write(""+c.getId()); %>' hidden>
+                                                    <input name="idP" id="idP" value='<% out.write(""+c.getPostagemId().getId()); %>' hidden>
                                                     <%out.write("<a href=post.jsp?id="+c.getPostagemId().getId()+">");%>
                                                         <h4 class="">
                                                             <% out.write(""+c.getUsuarioId().getNome()); %>
@@ -122,12 +125,14 @@
                                                             </a>
                                                             em <% out.write(""+c.getTempoCriado()); %>
                                                         </p>
-                                                </div>
+                                                        <p id="deletarComentario"></p>
+                                                    </div>
                                                 <!-- Divider-->
                                                 <hr class="my-4" />
                                             </div>
                                         </div>
                                     </div>
+                                </form>
                                     <%}%>
                         </article>
                         <!-- Bootstrap core JS-->
@@ -161,6 +166,9 @@
                                     'onclick="removerPost()">REMOVER POST</button>' +
                                     '<button type="button" class="btn btn-warning"' +
                                     'onclick="editarPost()">EDITAR POST</button>'
+                                const comentario = document.getElementById('deletarComentario')
+                                comentario.innerHTML = '<button type="button" class="btn btn-danger"' +
+                                    'onclick="excluirComentario()">EXCLUIR COMENT.</button>'
                             }
 
                             function adicionarComentario() {
@@ -168,6 +176,7 @@
                             }
 
                             function removerPost() {
+                                console.log(idPost)
                                 window.location.href = "remover.jsp?idPost=" + idPost;
                             }
 
@@ -177,6 +186,13 @@
 
                             function login() {
                                 window.location.href = "login.jsp";
+                            }
+
+                            function excluirComentario() {
+                                var idComentario = document.getElementById('idC').value
+                                var idPostagem = document.getElementById('idP').value
+                                var url = "apagarComentario.jsp?idC=" + idComentario + "&idP=" + idPostagem
+                                window.location.href = url
                             }
 
                             function verificaPerfil(){
